@@ -1,0 +1,7 @@
+@mixin transition($item, $duration, $action) {
+    -webkit-transition: $item $duration $action;
+    -moz-transition: $item $duration $action;
+    -ms-transition: $item $duration $action;
+    -o-transition: $item $duration $action;
+    transition: $item $duration $action;
+}

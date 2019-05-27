@@ -1,0 +1,114 @@
+/*================= Content ============== */
+
+section {
+    padding: 5% 1%;
+    @media (min-width: 2880px) {
+        padding: 140px 0;
+    }
+}
+
+.content-card {
+    &--secondary {
+        margin-top: 50px;
+        @media (min-width: 2880px) {
+            margin-top: 120px;
+        }
+    }
+    &__header {
+        font-family: $Roboto-bold;
+        margin-bottom: 30px;
+        @media (min-width: 2880px) {
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+    }
+    &__button {
+        margin: 20px 0;
+
+        @media (min-width: 992px) {
+            margin-top: 30px;
+        }
+        @media (min-width: 2880px) {
+            margin-top: 65px;
+        }
+    }
+}
+
+.content-item {
+    &__thumb {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        color: $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 4px;
+        cursor: pointer;
+        background: rgba($dark_grey, .3);
+        display: flex;
+        align-items: center;
+    	justify-content: center;
+        @include transition(background, .5s, linear);
+
+        &:hover {
+            color: $dark_grey;
+            background: transparent;
+        }
+
+        span {
+            font-family: $Roboto-bold;
+            font-size: 20px;
+            @media (min-width: 500px) {
+                font-size: 25px;
+            }
+            @media (min-width: 2880px) {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+.content-item-4 {
+
+    &__thumb {
+        position: relative;
+        text-align: center;
+        max-width: 126px;
+        margin: auto;
+        @media (min-width: 2880px) {
+            max-width: 240px;
+        }
+        img {
+            border-radius: 50%;
+            @media (min-width: 2880px) {
+                height: 240px;
+            }
+        }
+    }
+    &__title {
+        font-family: $Montserrat-Regular;
+        color: $dark_grey;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @media (min-width: 2880px) {
+            margin-top: 40px;
+            margin-bottom: 35px;
+            font-size: 25px;
+        }
+    }
+    &__text {
+        color: $grey;
+        font-size: 12px;
+        font-family: $Roboto-light;
+        @media (min-width: 2880px) {
+            font-size: 26px;
+        }
+    }
+}

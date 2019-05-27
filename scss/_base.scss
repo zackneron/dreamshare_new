@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $Roboto-regular;
+    @include transition(all, .5s, linear);
+}
+
+body {
+    font-size: 16px;
+}
+
+header,
+section {
+    display: block;
+}
+
+h1 {
+    color: $white;
+}
+
+h2 {
+    color: $dark_grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    @media (min-width: 2880px) {
+        max-width: 1880px;
+    }
+}
+
+.container,
+.content-card__container,
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.btn {
+    border-radius: 50px;
+    font-family: $Roboto-medium;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 2px solid;
+
+    @include transition(all, .5s, linear);
+    @media (min-width: 2880px) {
+        font-size: 30px;
+        padding: 25px 50px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+    &-primary {
+        background-color: $pink;
+        border-color: transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            border-color: $pink;
+            color: $pink;
+        }
+    }
+    &-secondary {
+        background-color: $white;
+        border-color: $pink;
+        color: $pink;
+
+        &:hover {
+            background-color: $pink;
+            border-color: transparent;
+            color: $white;
+        }
+    }
+}
+
+.global-title {
+    color: $pink !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-more {
+    color: $pink !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.pad-horizontal-1 {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.border-radius-10 {
+    border-radius: 5px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}

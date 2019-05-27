@@ -1,0 +1,78 @@
+$gutter-md-horizontal: 25px;
+$gutter-lg-horizontal: 40px;
+
+.row {
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+.col-1-of-1,
+.col-1-of-2,
+.col-1-of-3,
+.col-2-of-3,
+.col-1-of-4{
+    float: left;
+    margin-bottom: $gutter-md-horizontal;
+    @media (min-width: 2880px) {
+        margin-bottom: $gutter-lg-horizontal;
+    }
+    &:not(:last-child) {
+        margin-right: 0;
+
+        @media (min-width: 768px) {
+            margin-right: $gutter-md-horizontal;
+        }
+        @media (min-width: 2880px) {
+            margin-right: $gutter-lg-horizontal;
+        }
+    }
+}
+
+.col-1-of-1 {
+    width: 100%;
+}
+
+.col-1-of-2 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: calc((100% - #{$gutter-md-horizontal}) / 2);
+    }
+    @media (min-width: 2880px) {
+        width: calc((100% - #{$gutter-lg-horizontal}) / 2);
+    }
+}
+
+.col-1-of-3 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: calc((100% - 2 * #{$gutter-md-horizontal}) / 3);
+    }
+    @media (min-width: 2880px) {
+        width: calc((100% - 2 * #{$gutter-lg-horizontal}) / 3);
+    }
+}
+.col-2-of-3 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: calc(2 * ((100% - 2 * #{$gutter-md-horizontal}) / 3) + #{$gutter-md-horizontal});
+    }
+     @media (min-width: 2880px) {
+        width: calc(2 * ((100% - 2 * #{$gutter-lg-horizontal}) / 3) + #{$gutter-lg-horizontal});
+    }
+}
+
+.col-1-of-4 {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: calc((100% - 3 * #{$gutter-md-horizontal}) / 4);
+    }
+    @media (min-width: 2880px) {
+        width: calc((100% - 3 * #{$gutter-lg-horizontal}) / 4);
+    }
+}

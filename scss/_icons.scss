@@ -1,0 +1,80 @@
+.icon {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    display: block;
+    height: inherit;
+    top: -2px;
+    position: relative;
+}
+
+.icon-airplane {
+    background-image: url('../images/airplane.svg');
+}
+
+.icon-brush {
+    background-image: url('../images/brush.svg');
+}
+
+.icon-camera {
+    background-image: url('../images/camera.svg');
+}
+
+.icon-logo {
+    background-image: url('../images/logo.svg');
+}
+
+.icon-music {
+    background-image: url('../images/music.svg');
+}
+
+.icon-wrap {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 1700px) {
+        border: 5px solid $white;
+        width: 75px;
+        height: 75px;
+        right: -5px;
+        bottom: -5px;
+    }
+
+    &--music {
+        background: $pink;
+    }
+
+    &--brush {
+        background: $green;
+    }
+    &--camera {
+        background: $orange;
+    }
+    &--airplane {
+        background: $purple;
+        svg {
+            transform: rotate(-40deg);
+            @media (min-width: 2880px) {
+                transform: rotate(-40deg) scale(2) !important;
+            }
+        }
+    }
+    
+    svg {
+        @media (min-width: 2880px) {
+            transform: scale(2);
+        }
+        
+        path {
+            fill: white;
+        }
+    }
+}
